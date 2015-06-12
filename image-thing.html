@@ -21,28 +21,35 @@
             .card-header {
                 margin-bottom: 10px;
             }
-            polyfill-next-selector { content: '. h2'; }
+            polyfill-next-selector { content: 'h2'; }
              ::content h2 {
                 color: white;
                 font-size: 1.8rem;
                 font-weight: 300;
             }
+            polyfill-next-selector { content: 'hr'; }
+            ::content hr {
+              color: blue;
+              background: blue;                        
+              height: 1px;    
+              border: 0px;          
+            } 
             polyfill-next-selector { content: '.card-header img'; }
             .card-header ::content img {
                 width: 70px;
                 border-radius: 50%;
                 margin: 10px;
             }
-            
+
         </style>
 
-        <div class="card blue">
+        <div class="card blue white-text">
           <div class="card-content">
-            <content select="h2"></content>
-            <content>
-              Test: 
-            </content>
-            <content select="h2"></content>
+            <center>
+              <content select="h2"></content>
+              <hr class="blue accent-1" style="border: 0px; height: 2px;"></hr>
+              <content></content>            
+          </center>
           </div>
           
       </div>
