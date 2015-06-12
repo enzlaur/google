@@ -55,10 +55,21 @@
                 overflow: auto;
                 -webkit-overflow-scrolling: touch; 
             }
-            .container-2 {
-                width: 80%;
-                margin: 50px auto;
+            
+            core-toolbar {
+                background: rgb(69, 90, 100);
+                color: white;
             }
+            #tabs {
+                width: 100%;
+                margin: 0;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                text-transform: uppercase;
+            }
+            
         </style>
     </head>
     <!-- Start of Body -->
@@ -68,13 +79,13 @@
             <core-toolbar>
 
                 <paper-tabs id="tabs" selected="all" self-end>
-                <paper-tab name="all">All</paper-tab>
-                <paper-tab name="favorites">Favorites</paper-tab>
+                    <paper-tab name="all">All</paper-tab>
+                    <paper-tab name="favorites">Favorites</paper-tab>
                 </paper-tabs>
 
             </core-toolbar>
             
-            <div class="pushdown-10p"></div>
+            <div class="pushdown-5p"></div>
             <div class="container">
             <div class="windowheight">
                 <div class="row">
@@ -82,15 +93,15 @@
                         <div data-sr='reset scale up 95%, over 1.0s' >
                             <img src="assets/images/Google_Logo_IO_15.png" style="width: 30%;">
                         </div>
-                        <div data-sr='reset scale up 95%, over 1.0s, over 1.0s, wait 1.0s'>
+                        <div data-sr='scale up 95%, over 1.0s, over 1.0s, wait 1.0s'>
                             <img src="assets/images/io-logo-white.png" style="width: 30%;">
                         </div>                    
-                        <div data-sr='reset scale down 95%, over 0.6s, wait 2.0s'>
+                        <div data-sr='scale down 95%, over 0.6s, wait 1.5s'>
                             <h3 class="white-text roboto-200">
                                 Extended Manila
                             </h3>
                         </div>                        
-                        <div class="row" data-sr='enter bottom move 200px, wait 3.0s'>                            
+                        <div class="row" data-sr='enter bottom move 200px, wait 2.0s'>                            
                             <div class="col s12 m12">                                
                                 <post-card class="card">                                    
                                     <h2>
