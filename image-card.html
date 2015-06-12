@@ -1,0 +1,41 @@
+
+<link rel="import" href="../components/polymer/polymer.html">
+<link rel="import" href="../components/core-icon-button/core-icon-button.html">
+    
+
+    
+<polymer-element name="image-card">
+    <template>
+      <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>        
+        <style>
+            
+            polyfill-next-selector { content: 'span'; }
+             
+            polyfill-next-selector { content: 'p'; }
+            
+            
+        </style>
+
+        <div class="row">
+            <div class="">
+                <div class="card">
+                    <div class="card-image"> 
+                        <img src="assets/images/sample-1.jpg">
+                        <span class="card-title"> 
+                            <content select="span"> </content>
+                        </span>                        
+                    </div>
+                    <div class="card-content">
+                        <content select="p"></content>
+                        <content></content>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </template>
+    <script>
+        Polymer({});
+    </script>
+    
+</polymer-element>

@@ -1,6 +1,6 @@
 <link rel="import" href="../components/polymer/polymer.html">
 <link rel="import" href="../components/core-icon-button/core-icon-button.html">
-
+<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>	      
 <polymer-element name="post-card">
   <template>
     <style>
@@ -12,6 +12,7 @@
       width: 100%;
       font-size: 1.2rem;
       font-weight: 300;
+        border-radius: 2px;
     }
     .card-header {
       margin-bottom: 10px;
@@ -29,15 +30,15 @@
       margin: 10px;
     }
     </style>
-
-    <div class="card-header" layout horizontal center>
-
-      <content select="img"></content>
-      <content select="h2"></content>
-
-    </div>
     
-    <content></content>
+      <div class="card">
+          <div class="card-header" layout horizontal center>
+              <content select="img"></content>
+              <content select="h2"></content>
+          </div>
+          <content></content>
+      </div>
+    
   </template>
   <script>
   Polymer({});

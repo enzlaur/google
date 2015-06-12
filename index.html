@@ -11,6 +11,9 @@
 <html>
     <head>
         <title>Google IO 2015 Extended Manila</title>
+        
+        <script src="components/webcomponentsjs/webcomponents.js">
+        </script>
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="css/animate.min.css">
         <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>	      
@@ -25,11 +28,7 @@
         <meta name="generator" content="Google IO 2015 Extended Manila" />
         
         
-        <!-- element imports -->
-        
-        <script src="components/webcomponentsjs/webcomponents.js">
-        </script>
-
+        <!-- polymer element imports -->                
         <link rel="import" href="components/font-roboto/roboto.html">
         <link rel="import"
         href="components/core-header-panel/core-header-panel.html">
@@ -39,6 +38,8 @@
         href="components/paper-tabs/paper-tabs.html">
         <link rel="import" href="post-list.html">
         <link rel="import" href="post-card.html">
+        <link rel="import" href="image-thing.html">
+        <link rel="import" href="image-card.html">
         <!-- end Polymer imports -->
         
         <style> 
@@ -119,15 +120,120 @@
                 </div>                            
             </div>               
             
-            <div class="windowheight">
-                <!-- Using easing with move -->
-                <div data-sr='reset move 50px, over 1.6s'> <h1>Foo</h1> </div>
-                <div data-sr='reset ease-in 50px, over 1.6s'> <h1>Bar</h1> </div>
-
-                <!-- Using easing with scale -->
-                <div data-sr='reset scale 30%, over 1.6s'> <h1>Bun</h1> </div>
-                <div data-sr='reset hustle 30%, over 1.6s'> <h1>Baz</h1> </div>
-                <div data-sr='reset ease down 20%, over 1.6s'> <h1>Boo</h1> </div>
+            <div class="windowheight" >
+                <div class="row" layout >
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-02.svg">
+                            <h2>
+                                Laurenz
+                            </h2>
+                            <p>
+                                I do know that something should go here. 
+                                It's just that I have no idea what it should be.
+                                <br><br><br>
+                            </p>
+                        </post-card>    
+                    </div>
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-01.svg">
+                            <h2>
+                                Adriel
+                            </h2>
+                            <p>
+                               This is actually a generic Polymer card. The problem is that this 
+                                cards do not have a rounded corners.
+                            </p>
+                            <br>
+                        </post-card>    
+                    </div>
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-03.svg">
+                            <h2>
+                                Tolentino
+                            </h2>
+                            <p>
+                                There's no automatic scaling on how the cards' height should be. 
+                                I suggest adding a 'br' tag in order to have a consistent card height.
+                            </p>
+                        </post-card>    
+                    </div>                    
+                </div>
+                <div class="row ">
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-04.svg">
+                            <h2>
+                                Small
+                            </h2>
+                            <p>
+                                Your card without adjusting.
+                            </p>
+                        </post-card> 
+                    </div>
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-05.svg">
+                            <h2>
+                                Medium
+                            </h2>
+                            <p>
+                                Looks a lot like this card which is longer.
+                            </p>
+                        </post-card> 
+                    </div>
+                    <div class="col s12 m4">
+                        <post-card class="card">
+                            <img src="images/avatar-06.svg">
+                            <h2>
+                                Large
+                            </h2>
+                            <p>
+                                With another card that looks way way way way way way taller like this one.
+                            </p>
+                        </post-card> 
+                    </div>
+                </div>
+                <div class="row" layout vertical center>                    
+                    <div class="col s12 m9">
+                        <post-card class="light-blue accent-4 white-text card">
+                            <p>
+                                That's why it might probably be better if 
+                                you edit your elements to have a minimum height or max height and 
+                                just let the text overflow(?). 
+                                Or maybe set a limit on the number of characters so that the
+                                cards always look pretty!! 
+                            </p>
+                        </post-card>
+                    </div>
+                    <div class="col s12">
+                        <image-thing>
+                            <h2>This card was written using Materialize CSS and Polymer</h2>                            
+                        </image-thing>                        
+                    </div>
+                    <div class="row">
+                        <div class="col s12 m4">
+                            <image-card>
+                                <span>A Materializecss object</span>
+                                <p>Made easier using polymer!!</p>
+                            </image-card>
+                        </div>
+                        <div class="col s12 m4">
+                            <image-card>
+                                <span>Just a few lines of code</span>
+                                <p>This card appears automatically!!</p>
+                            </image-card>
+                        </div>
+                        <div class="col s12 m4">
+                            <image-card>
+                                <span>I don't need to create my own styles</span>
+                                <p>I just let materialize do it for me</p>                            
+                            </image-card>
+                        </div>
+                    </div>                    
+                </div>
             </div>
         </div>
         
